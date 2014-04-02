@@ -1,0 +1,25 @@
+{
+  "name": "grbl-gcode-cleaner",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [],
+  "main": "grbl-gcode-cleaner.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tmpvar/grbl-gcode-cleaner.git"
+  },
+  "author": "Elijah Insua <tmpvar@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tmpvar/grbl-gcode-cleaner/issues"
+  },
+  "devDependencies": {
+    "mocha": "1.x",
+    "istanbul": "*"
+  },
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha test/test.js -R spec",
+    "cover": "istanbul cover _mocha -- test/test.js -R spec",
+    "minify": "browserify -e grbl-gcode-cleaner.js | uglifyjs > grbl-gcode-cleaner.min.js"
+  }
+}
